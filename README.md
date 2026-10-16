@@ -1,0 +1,1 @@
+This is a folder with all the work I've done to learn SQL/Postgres.
