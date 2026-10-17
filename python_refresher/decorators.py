@@ -49,3 +49,17 @@
 #      return a * b
 
 # print(multiply(2,3))
+
+ROUTES = {}
+
+def route(path):
+    def decorator(func):
+        ROUTES[path] = func   # write it in the notebook
+        return func           # give the original back, unchanged
+    return decorator
+
+@route("/about")
+def about():
+    return "About us"
+
+print(ROUTES["/about"]())   # About us
